@@ -24,8 +24,9 @@ public class DoctorConroller {
 
     @GetMapping("/{id}")
     public ResponseEntity<?> getDoctor(@PathVariable("id") Integer id){
-        DoctorDto result = doctorService.getDoctor(id);
-        return ResponseEntity.ok(result);
+        DoctorDto javob = doctorService.getDoctor(id);
+        return ResponseEntity.ok(javob);
+
     }
 
 
