@@ -93,15 +93,7 @@ public class VisitService {
         return visitRepositroy.findAll(Sort.by(Sort.Direction.ASC,field));
     }
 
-    // bu dto ga o'girmasdan qilingan usul
-//    public Page<Visit> getAllVisitWithPagenation(Integer offset, Integer pageSize) {
-//        Page<Visit> visitDtos = visitRepositroy.findAll(PageRequest.of(offset,pageSize));
-//        return visitDtos;
-//
-//    }
 
-
-    // bu usul dto bilan qilingan usul visitdan dto ga o'girib keyin dto berib yuboramiz xavfsizroq
     public Page<Visit> getAllVisitWithPagenation(Integer offset, Integer pageSize) {
         Pageable pageable = PageRequest.of(offset,pageSize);
         Page<Visit> resultPage = visitRepositroy.findAll(pageable);
